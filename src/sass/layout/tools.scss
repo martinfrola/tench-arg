@@ -1,0 +1,217 @@
+.tools {
+  margin-top: 10rem;
+}
+
+.title-tools {
+  margin-left: 10vw;
+  text-align: right;
+  h2 {
+    margin-top: 0;
+    font-size: $h1-mobile;
+    color: $principal;
+    margin-bottom: 2rem;
+  }
+  p {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    font-size: $text-mobile;
+    strong {
+      color: $principal;
+    }
+  }
+  @include tablet {
+    margin-left: 45%;
+    h2 {
+      font-size: $h1;
+      margin-bottom: 4rem;
+    }
+    p {
+      font-size: $text;
+    }
+  }
+}
+
+// .tools-content {
+//   width: 100%;
+//   display: grid;
+//   grid-template-columns: repeat(1, 1fr);
+//   gap: 2rem;
+//   margin-bottom: 10rem;
+//   @include tablet {
+//     grid-template-columns: repeat(3, 1fr);
+//     .card:last-of-type {
+//       grid-column: 2 / 3;
+//     }
+//   }
+//   @include desktop {
+//     grid-template-columns: repeat(4, 1fr);
+//     .card:last-of-type {
+//       grid-column: 4 / 5;
+//     }
+//   }
+// }
+// .card {
+//   box-shadow: 0px 3px 15px $dark-blue;
+//   display: flex;
+//   flex-direction: column;
+//   background-color: $principal;
+//   width: 80%;
+//   margin: 0 auto;
+//   min-height: 20rem;
+//   border-radius: 0.7rem;
+//   text-align: center;
+//   transform: scale(1);
+//   transition: transform 0.3s ease;
+//   &:hover {
+//     transform: scale(1.05);
+//     box-shadow: 0px 3px 20px $dark-blue;
+//   }
+//   h3 {
+//     color: $claro;
+//     margin-top: 3rem;
+//     font-size: 2rem;
+//   }
+//   .btn {
+//     margin: 2rem auto 1rem auto;
+//     padding: 0.8rem 1.2rem;
+//   }
+//   img {
+//     height: 15rem;
+//   }
+//   @include tablet {
+//     width: 100%;
+//     min-height: 30rem;
+//     h3 {
+//       font-size: 2.5rem;
+//     }
+//     img {
+//       height: 20rem;
+//     }
+//   }
+// }
+
+// .plans {
+//   margin-bottom: 3rem;
+//   h2 {
+//     font-size: $subtitle;
+//   }
+// }
+
+.tools-content {
+  width: 100%;
+  min-height: 50vh;
+  background-color: $principal;
+  color: $claro;
+  display: flex;
+  flex-direction: column;
+  border-radius: 7px;
+  @include tablet {
+    flex-direction: row;
+  }
+}
+
+.tools-types {
+  background-color: $light-blue;
+  border-radius: 7px 7px 0 0;
+  min-width: 20%;
+  ul {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  li {
+    list-style: none;
+    color: $font-color;
+    font-size: $text-mobile;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    height: 7rem;
+    padding-top: 5%;
+    &:first-of-type {
+      border-radius: 7px 0 0 0;
+    }
+    &:last-of-type {
+      border-radius: 0 7px 0 0;
+    }
+    &:hover {
+      background-color: $principal;
+      color: $claro;
+      cursor: pointer;
+    }
+  }
+  @include tablet {
+    border-radius: 7px 0 0 7px;
+    ul {
+      flex-direction: column;
+    }
+    li {
+      height: calc(50vh / 4);
+      padding-left: 2rem;
+      line-height: calc(50vh / 4);
+      font-size: $text;
+      &:first-of-type {
+        border-radius: 7px 0 0 0;
+      }
+      &:last-of-type {
+        border-radius: 0 0 0 7px;
+      }
+    }
+  }
+  .selected-tool {
+    background-color: $principal;
+    color: $claro;
+  }
+}
+
+.tool-option {
+  display: none;
+}
+
+.show-tool {
+  display: flex;
+  flex-direction: column;
+  @include tablet {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.current-tool {
+  width: 100%;
+  margin: 5rem 0;
+  img {
+    height: 10rem;
+  }
+  @include tablet {
+    width: 100%;
+    height: 100%;
+    margin: auto 2rem;
+    img {
+      height: 25rem;
+    }
+  }
+}
+
+.tool-description {
+  text-align: center;
+  p {
+    font-size: $text-mobile;
+    margin: 1rem 1rem;
+  }
+  @include tablet {
+    p {
+      font-size: $text;
+    }
+  }
+}
+
+.btn-servicios {
+  margin-top: 4rem;
+  font-size: $text-mobile;
+  @include tablet {
+    font-size: $text;
+  }
+}

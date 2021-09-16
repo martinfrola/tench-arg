@@ -1,0 +1,19 @@
+.trabajos {
+}
+
+.work-page {
+  display: flex;
+  flex-direction: column;
+  img {
+  }
+  @include tablet {
+    flex-direction: row;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.work-content {
+  width: 50%;
+}

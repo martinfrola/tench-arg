@@ -1,0 +1,207 @@
+.nav-bg {
+  background-color: white;
+  text-align: center;
+  box-shadow: 0 1px 50px 0 $claro;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 9rem;
+  @include tablet {
+    align-items: center;
+  }
+  padding-top: 1rem;
+  img {
+    height: 7rem;
+  }
+}
+
+.options {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+  }
+  a {
+    font-size: 2rem;
+    padding-bottom: 0.7rem;
+    text-decoration: none;
+    color: $dark-blue;
+    &:hover {
+      border-bottom: 2px solid $dark-blue;
+      padding-bottom: 0.5rem;
+    }
+    margin-right: 5rem;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.menu-btn {
+  display: block;
+  @include tablet {
+    display: none;
+  }
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  width: 6rem;
+  height: 6rem;
+  span {
+    border-radius: 10rem;
+    background-color: $principal;
+    display: block;
+    width: 60%;
+    margin: 0.5rem auto;
+    height: 0.3rem;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
+}
+.options-mobile {
+  display: none;
+  z-index: 999;
+  align-items: flex-start;
+}
+.view {
+  background-color: $principal;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40vh;
+  width: 70vw;
+  animation: open-view 0.5s ease-out;
+  border-radius: 0 0 1rem 0;
+  a {
+    opacity: 1;
+    font-size: $text;
+    color: $claro;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    width: 80%;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid $claro;
+    text-align: start;
+    &:first-of-type {
+      margin-top: 6rem;
+    }
+    animation: text-opacity 1s ease-out;
+    &:hover {
+      transform: scale(1.01);
+    }
+  }
+}
+.blank-space {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+}
+//Animation
+.open {
+  z-index: 999;
+  .top-line {
+    animation-name: top-line-animation;
+  }
+  .mid-line {
+    animation-name: mid-line-animation;
+  }
+  .bottom-line {
+    animation-name: bottom-line-animation;
+  }
+}
+
+.top-line {
+  animation-name: top-line-animation-close;
+}
+.mid-line {
+  animation-name: mid-line-animation-close;
+}
+.bottom-line {
+  animation-name: bottom-line-animation-close;
+}
+
+@keyframes top-line-animation {
+  50%,
+  100% {
+    margin: 0.01rem auto;
+    transform: translateY(3px) rotate(-45deg);
+  }
+}
+@keyframes bottom-line-animation {
+  50%,
+  100% {
+    margin: 0.01rem auto;
+    transform: translateY(-3px) rotate(45deg);
+  }
+}
+@keyframes mid-line-animation {
+  50%,
+  100% {
+    margin: 0 auto;
+    transform: translateX(50px);
+    opacity: 0;
+  }
+}
+@keyframes top-line-animation-close {
+  0% {
+    margin: 0.01rem auto;
+    transform: translateY(3px) rotate(-45deg);
+  }
+  50%,
+  100% {
+    margin: 0.5rem auto;
+    transform: translateY(0) rotate(0);
+  }
+}
+@keyframes bottom-line-animation-close {
+  0% {
+    margin: 0.01rem auto;
+    transform: translateY(-3px) rotate(45deg);
+  }
+  50%,
+  100% {
+    margin: 0.5rem auto;
+    transform: translateY(0) rotate(0);
+  }
+}
+@keyframes mid-line-animation-close {
+  0% {
+    margin: 0 auto;
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  50%,
+  100% {
+    margin: 0.5 auto;
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes open-view {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 40vh;
+  }
+}
+@keyframes text-opacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

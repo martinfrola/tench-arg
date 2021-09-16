@@ -1,0 +1,50 @@
+.scroll-top {
+  position: fixed;
+  bottom: 3rem;
+  right: -1rem;
+}
+.top-btn {
+  height: 4rem;
+  width: 5rem;
+  position: relative;
+  border-radius: 1rem;
+  border: none;
+  background-color: $principal;
+  opacity: 0;
+  &:hover {
+    cursor: pointer;
+  }
+  img {
+    height: 2rem;
+    width: 3rem;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    top: 10px;
+    bottom: 0;
+    transform: rotate(270deg);
+  }
+  @include tablet {
+    height: 5rem;
+    width: 7rem;
+    img {
+      height: 3rem;
+      width: 4rem;
+    }
+  }
+}
+.show {
+  animation: show 1s ease-in-out;
+  opacity: 1;
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

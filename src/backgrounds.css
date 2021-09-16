@@ -1,0 +1,19 @@
+/* .header {
+  background-image: url(./img//bg-degrade.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+.footer {
+  background: white;
+  /* background-image: url(./img//bg-footer.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+
+.blog-img {
+  background: url(./img/ux-writting.png);
+  background-position: center;
+  background-size: cover;
+}
