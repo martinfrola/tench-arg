@@ -1,0 +1,9 @@
+{
+  "short_name": "Tench.",
+  "name": "Impulsa tu negocio en el mundo digital",
+
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

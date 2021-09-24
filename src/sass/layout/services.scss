@@ -1,0 +1,66 @@
+.service {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5rem;
+  gap: 3rem;
+  text-align: center;
+  h1 {
+    font-size: $h1-mobile;
+  }
+  h2 {
+    font-size: $subtitle-mobile;
+  }
+  p {
+    font-size: $text-mobile;
+  }
+  @include tablet {
+    flex-direction: row;
+    text-align: start;
+    .service-content {
+      width: 50%;
+    }
+    h1 {
+      font-size: $h1;
+    }
+    h2 {
+      font-size: $subtitle;
+    }
+    p {
+      font-size: $text;
+    }
+  }
+}
+
+.service-design,
+.service-seo {
+  flex-direction: column;
+  .service-content {
+    text-align: center;
+  }
+  @include tablet {
+    flex-direction: row-reverse;
+    .service-content {
+      text-align: end;
+    }
+  }
+}
+
+.img-mobile {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  @include tablet {
+    display: none;
+  }
+}
+
+.img-desktop {
+  display: none;
+  width: 50rem;
+  margin: 0 0;
+  @include tablet {
+    display: block;
+  }
+}

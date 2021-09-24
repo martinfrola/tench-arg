@@ -1,0 +1,101 @@
+.header {
+  height: calc(100vh);
+  width: 100%;
+  position: relative;
+  background-color: rgb(71, 148, 184);
+  .header-content {
+    padding-top: 25vh;
+    .title {
+      margin: 0;
+      font-size: $header-mobile;
+      width: 25rem;
+      color: $claro;
+    }
+    .title-content {
+      font-size: $text-mobile;
+      width: 80%;
+      font-weight: $bold;
+      strong {
+        color: white;
+        font-size: 16px;
+      }
+    }
+    @include tablet {
+      .title {
+        font-size: $header;
+        width: 40rem;
+      }
+      .title-content {
+        width: 50rem;
+        font-size: $text;
+        strong {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+.btn-header {
+  margin-top: 5rem;
+}
+.btn {
+  padding: 1.5rem 3rem;
+  background-color: $dark-blue;
+  border: none;
+  border-radius: 0.7rem;
+  font-size: 16px;
+  color: $claro;
+  margin-top: 5rem;
+  font-size: $text-mobile;
+  &:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  @include tablet {
+    font-size: $text;
+  }
+}
+
+.social-media {
+  position: absolute;
+  top: 10rem;
+  right: 0;
+  left: 0;
+  width: 90%;
+  max-width: 120rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  a {
+    margin-bottom: 2rem;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+    img {
+      height: 2rem;
+      @include tablet {
+        height: 3rem;
+      }
+    }
+  }
+}
+
+.cohete-icon {
+  position: absolute;
+  bottom: 0;
+  left: 20vw;
+  z-index: 0;
+  height: 25rem;
+  @include tablet {
+    bottom: 5vh;
+    left: 25vw;
+    height: 30rem;
+  }
+  @include desktop {
+    top: 40vh;
+    left: 50vw;
+    height: 50rem;
+  }
+}

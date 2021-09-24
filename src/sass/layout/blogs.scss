@@ -1,0 +1,27 @@
+.blog {
+  margin-top: 5rem;
+  img {
+    width: 100%;
+  }
+  h1 {
+    font-size: $h1-mobile;
+  }
+  p {
+    font-size: $text-mobile;
+  }
+  a {
+    text-decoration: underline;
+    color: $font-color;
+  }
+  @include tablet {
+    img {
+      width: 60%;
+    }
+    h1 {
+      font-size: $h1;
+    }
+    p {
+      font-size: $text;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.loading-icon {
+  position: absolute;
+  width: 50%;
+  top: 0;
+
+  right: 0;
+  margin: auto auto;
+  @include tablet {
+    height: 30rem;
+  }
+  animation: loading 2s ease infinite;
+  animation: name duration timing-function delay iteration-count direction
+    fill-mode;
+}
+
+@keyframes loading {
+  0% {
+    bottom: 0;
+    right: 40%;
+    left: 0;
+  }
+  50% {
+    bottom: 40%;
+    left: 40%;
+    right: 0;
+  }
+  100% {
+    bottom: 0;
+    right: 40%;
+    left: 0;
+  }
+}

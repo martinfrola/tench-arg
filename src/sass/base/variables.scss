@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&display=swap");
+$fuente-principal: "Epilogue", sans-serif;
+
+//Tamaños para mixins
+$telefono: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+
+//Colores
+$principal: #005792;
+$principal-rgba: rgb(0, 54, 132, 0.8);
+$font-color: #00204a;
+$light-blue: #00bbf0;
+$dark-blue: #00204a;
+$claro: #dff2f8;
+$oscuro: rgb(26, 26, 26);
+
+//Fuentes
+$regular: 400;
+$bold: 700;
+
+// tamaños-fuente
+$header: 64px;
+$header-mobile: 45px;
+$h1: 38px;
+$h1-mobile: 28px;
+$subtitle: 30px;
+$subtitle-mobile: 22px;
+$text: 18px;
+$text-mobile: 14px;

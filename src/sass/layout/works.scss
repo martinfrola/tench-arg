@@ -1,0 +1,90 @@
+.works {
+  margin-top: 10rem;
+  h2 {
+    margin-top: 0;
+    font-size: $h1-mobile;
+    width: 35rem;
+    color: $principal;
+    @include tablet {
+      font-size: $h1;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+    strong {
+      color: $principal;
+    }
+  }
+}
+
+.works-cards {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.work {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid $principal;
+  &:last-of-type {
+    border: none;
+  }
+  img {
+    width: 100%;
+  }
+  h3 {
+    text-align: center;
+    font-size: $subtitle-mobile;
+  }
+
+  @include tablet {
+    flex-direction: row;
+    border: none;
+    img {
+      width: 60%;
+    }
+    h3 {
+      text-align: center;
+      font-size: $subtitle;
+    }
+  }
+}
+
+.grindoil {
+  flex-direction: column;
+
+  @include tablet {
+    flex-direction: row-reverse;
+  }
+}
+.btns {
+  text-align: center;
+  p {
+    font-size: $text-mobile;
+  }
+  @include tablet {
+    p {
+      font-size: $text;
+    }
+  }
+  .btn {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    padding: 1rem 1rem;
+    @include tablet {
+      margin-top: 5rem;
+      padding: 1rem 2rem;
+    }
+  }
+}
+
+.btn-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.trabajos-title {
+  color: $principal;
+}
